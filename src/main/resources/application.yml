@@ -1,0 +1,11 @@
+server:
+  port: 8080
+spring:
+  kafka:
+    bootstrap-servers: hadoop102:9092,hadoop103:9092
+    producer:
+      value-serializer: org.apache.flink.api.common.serialization.SimpleStringSchema
+      key-serializer: org.apache.flink.api.common.serialization.SimpleStringSchema
+
+# 连接kafka集群
+# key value 序列化
